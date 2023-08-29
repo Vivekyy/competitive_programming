@@ -29,8 +29,10 @@ std::string to_lower(std::string str) { std::transform(all(str), str.begin(), ::
 // #define int long long
 
 void solve(){
-    int a,b,n,mod;
+    int x,y,n,mod;
     
+    
+
 }
 
 int32_t main(){

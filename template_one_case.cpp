@@ -30,6 +30,8 @@ std::string to_lower(std::string str) { std::transform(all(str), str.begin(), ::
 
 void solve(int in){
     
+    
+
 }
 
 int32_t main(){
