@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define read(type) readInt<type>()
+#define read(type) readInt<type>() //Faster read
 
 #define pb push_back
 #define mp make_pair
