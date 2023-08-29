@@ -17,6 +17,8 @@ using namespace std;
 #define si set<int>;
 #define mii map<int, int>;
 
+#define debug(x) cout << #x << " = " << x << "\n"; 
+
 #define printv(a) {for(auto u:a) cout<<u<<" "; cout<<"\n";}
 int min(int a, int b) { if (a<b) return a; return b; }
 int max(int a, int b) { if (a>b) return a; return b; }
