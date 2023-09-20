@@ -26,7 +26,7 @@ void to_upper(std::string str) { std::transform(all(str), str.begin(), ::toupper
 void to_lower(std::string str) { std::transform(all(str), str.begin(), ::tolower); }
 
 #define ll long long
-// #define int long long
+#define int long long
 
 void solve(){
     int x,y,n,mod;
