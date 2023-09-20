@@ -12,7 +12,7 @@ using namespace std;
 #define uset unordered_set
 #define pii pair<int, int>
 #define si set<int>
-#define useti unordered_set<int>
+#define usi unordered_set<int>
 #define mii map<int, int>
 #define dqi deque<int>
 #define pqi priority_queue<int>

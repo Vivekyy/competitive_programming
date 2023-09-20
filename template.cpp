@@ -3,6 +3,8 @@ using namespace std;
 #define read(type) readInt<type>()
 
 #define mp make_pair
+#define f first
+#define s second
 #define all(x) (x).begin(), (x).end()
 #define imax INT_MAX
 #define imin INT_MIN
@@ -12,11 +14,12 @@ using namespace std;
 #define uset unordered_set
 #define pii pair<int, int>
 #define si set<int>
-#define useti unordered_set<int>
+#define usi unordered_set<int>
 #define mii map<int, int>
 #define dqi deque<int>
 #define pqi priority_queue<int>
 
+#define fori(n) for(int i = 0; i < n ; i++)
 #define debug(x) cout << #x << " = " << x << "\n"; 
 #define printv(a) {for(auto u:a) cout<<u<<" "; cout<<"\n";}
 
