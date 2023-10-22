@@ -24,8 +24,8 @@ using namespace std;
 #define pqll priority_queue<ll>
 
 #define all(x) (x).begin(), (x).end()
-#define len(x) (int((x).size()))
-#define fori(n) for(ll i = 0; i < n ; i++)
+#define len(x) (ll((x).size()))
+#define forn(i,n) for(ll i = 0; i < n ; i++)
 
 #define debug(x) cout << #x << " = " << x << "\n"; 
 #define printv(a) {for(auto u:a) cout<<u<<" "; cout<<"\n";}

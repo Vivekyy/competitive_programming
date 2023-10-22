@@ -24,8 +24,8 @@ using namespace std;
 #define pqll priority_queue<ll>
 
 #define all(x) (x).begin(), (x).end()
-#define len(x) (int((x).size()))
-#define fori(n) for(ll i = 0; i < n ; i++)
+#define len(x) (ll((x).size()))
+#define forn(i,n) for(ll i = 0; i < n ; i++)
 
 #define debug(x) cout << #x << " = " << x << "\n"; 
 #define printv(a) {for(auto u:a) cout<<u<<" "; cout<<"\n";}
@@ -36,7 +36,7 @@ void to_upper(std::string str) { std::transform(all(str), str.begin(), ::toupper
 void to_lower(std::string str) { std::transform(all(str), str.begin(), ::tolower); }
 
 
-void solve(ll in){
+void solve(){
     
 
 }
@@ -45,9 +45,7 @@ int32_t main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    ll in;
-    cin >> in;
-    solve(in);
+    solve();
 
     return 0;
 }
