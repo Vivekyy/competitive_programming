@@ -24,19 +24,16 @@ using namespace std;
 #define pqll priority_queue<ll>
 
 #define all(x) (x).begin(), (x).end()
-#define len(x) (int((x).size())) // need int here, otherwise bugs
 #define forn(i,n) for(ll i = 0; i < n ; i++)
 
 #define debug(x) cout << #x << " = " << x << "\n"; 
 #define printv(a) {for(auto u:a) cout<<u<<" "; cout<<"\n";}
 
-ll min(ll a, ll b) { if (a<b) return a; return b; }
-ll max(ll a, ll b) { if (a>b) return a; return b; }
 void to_upper(std::string str) { std::transform(all(str), str.begin(), ::toupper); }
 void to_lower(std::string str) { std::transform(all(str), str.begin(), ::tolower); }
 
 void solve(){
-    ll x,y,n,mod;
+    ll x,y,n,k,mod;
 
 }
 

@@ -30,15 +30,13 @@ using namespace std;
 #define debug(x) cout << #x << " = " << x << "\n"; 
 #define printv(a) {for(auto u:a) cout<<u<<" "; cout<<"\n";}
 
-ll min(ll a, ll b) { if (a<b) return a; return b; }
-ll max(ll a, ll b) { if (a>b) return a; return b; }
 void to_upper(std::string str) { std::transform(all(str), str.begin(), ::toupper); }
 void to_lower(std::string str) { std::transform(all(str), str.begin(), ::tolower); }
 
 
 void solve(){
+    ll x,y,n,k,mod;
     
-
 }
 
 int32_t main(){
