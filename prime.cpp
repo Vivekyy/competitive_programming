@@ -1,5 +1,9 @@
+using namespace std;
+
 #include <bits/stdc++.h>
 #define ll long long
+#define mpll map<ll, ll>
+#define sll set<ll, ll>
 
 const int N=1e7+10;
 int prime[20000010]; 
@@ -18,18 +22,51 @@ void sieve(ll a){
     }
 }
 
-ll primeFacs(ll n){
-    ll cnt=0,sum=1;
-    for(int i=0; prime[i]*prime[i]<=n && i<nprime;i++){
-        cnt=0;
-        while(n%prime[i]==0)
-            cnt++;n/=prime[i];
-        sum*=(cnt+1);
+// ll primeFacs(ll n){
+//     ll cnt=0,sum=1;
+//     for(int i=0; prime[i]*prime[i]<=n && i<nprime;i++){
+//         cnt=0;
+//         while(n%prime[i]==0)
+//             cnt++;n/=prime[i];
+//         sum*=(cnt+1);
+//     }
+//     if(n>1)
+//         sum*=2;
+//     return sum;
+// } 
+
+mpll primeFacs(ll n){
+    mpll out;
+    for(int i=2; i*i<=n; i++){
+        while(n%i==0){
+            n/=i;
+            out[i]++;
+        }
     }
-    if(n>1)
-        sum*=2;
-    return sum;
-} 
+    return out;
+}
+
+sll distinctPrimeFacs(ll n){
+    sll out;
+    for(int i=2; i*i<=n; i++){
+        while(n%i==0){
+            n/=i;
+            out.insert(i);
+        }
+    }
+    return out;
+}
+
+ll numPrimeFacs(ll n){
+    ll cnt;
+    for(int i=2; i*i<=n; i++){
+        while(n%i==0){
+            n/=i;
+            cnt++;
+        }
+    }
+    return cnt;
+}
 
 // bool miller_rabin(ll p, int itt) {
 //     if(p<2) 
