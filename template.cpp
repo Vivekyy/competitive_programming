@@ -29,8 +29,8 @@ using namespace std;
 #define debug(x) cout << #x << " = " << x << "\n"; 
 #define printv(a) {for(auto u:a) cout<<u<<" "; cout<<"\n";}
 
-void to_upper(std::string str) { std::transform(all(str), str.begin(), ::toupper); }
-void to_lower(std::string str) { std::transform(all(str), str.begin(), ::tolower); }
+void to_upper(std::string &str) { std::transform(all(str), str.begin(), ::toupper); }
+void to_lower(std::string &str) { std::transform(all(str), str.begin(), ::tolower); }
 
 void solve(){
     ll x,y,n,k,mod;

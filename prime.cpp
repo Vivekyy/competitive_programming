@@ -2,6 +2,7 @@ using namespace std;
 
 #include <bits/stdc++.h>
 #define ll long long
+#define dqll deque<ll>
 #define mpll map<ll, ll>
 #define sll set<ll, ll>
 
@@ -21,6 +22,38 @@ void sieve(ll a){
         }
     }
 }
+
+ll gcd(ll a, ll b){ return b ? gcd(b, a % b) : a; }
+
+ll lcm(ll a, ll b){ return a*b/gcd(a,b); }
+
+// Factoring with sieveFacs:
+// sll facs;
+// while(tmp > 1){
+//     facs.insert(sv[tmp]);
+//     tmp /= sv[tmp];
+// }
+dqll sieveFacs(ll maxVal){
+    dqll pfacs;
+    dqll out(maxVal);
+    for(ll i=0; i<maxVal; i++){
+        out[i] = i;
+    }
+
+    for(ll i=2; i<maxVal; i++){
+        if (out[i] != i)
+            continue;
+        
+        ll x = i;
+        while(x < maxVal){
+            out[x] = min(out[x], i);
+            x += i;
+        }
+    }
+
+    return out;
+}
+
 
 // ll primeFacs(ll n){
 //     ll cnt=0,sum=1;

@@ -1,6 +1,12 @@
-#define ll long long
+using namespace std;
 
-int gcd(ll a, ll b){ return b ? gcd(b, a % b) : a; }
+#include <bits/stdc++.h>
+#define ll long long
+#define dqll deque<ll>
+
+ll gcd(ll a, ll b){ return b ? gcd(b, a % b) : a; }
+
+ll lcm(ll a, ll b){ return a*b/gcd(a,b); }
 
 // extended version to find x, y such that ax + by = gcd(a, b)
 ll gcd_ext(ll a, ll b, ll &x, ll &y){
@@ -32,4 +38,32 @@ ll pow_mod(ll x, ll a, ll N){
         return 1;
     ll t = pow_mod(x, a/2, N);
     return a%2==0 ? pos_mod(t*t, N) : pos_mod(t*t*x, N);
+}
+
+ll totient(ll n) {
+    ll result = n;
+    for (ll i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            while (n % i == 0)
+                n /= i;
+            result -= result / i;
+        }
+    }
+    if (n > 1)
+        result -= result / n;
+    return result;
+}
+
+dqll totient_1_to_n(int n) {
+    dqll phi(n + 1);
+    for (ll i = 0; i <= n; i++)
+        phi[i] = i;
+
+    for (ll i = 2; i <= n; i++) {
+        if (phi[i] == i) {
+            for (ll j = i; j <= n; j += i)
+                phi[j] -= phi[j] / i;
+        }
+    }
+    return phi;
 }
